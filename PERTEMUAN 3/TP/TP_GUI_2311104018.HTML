@@ -1,0 +1,70 @@
+`
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Nama Praktikan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        #output {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Masukkan Nama Praktikan</h2>
+        <input type="text" id="nameInput" placeholder="Masukkan Nama">
+        <button onclick="submitName()">Submit</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function submitName() {
+            let name = document.getElementById("nameInput").value;
+            let output = document.getElementById("output");
+            if (name.trim() !== "") {
+                output.textContent = "Halo " + name;
+            } else {
+                output.textContent = "Silakan masukkan nama!";
+            }
+        }
+    </script>
+</body>
+</html>

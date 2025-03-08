@@ -1,0 +1,120 @@
+`
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .calculator {
+            width: 250px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .screen {
+            width: 100%;
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            border: none;
+            background: #eee;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+        button {
+            width: 100%;
+            height: 50px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .operator {
+            background: orange;
+            color: white;
+        }
+        .clear {
+            background: red;
+            color: white;
+        }
+        .equal {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="screen" id="screen" disabled>
+        <div class="buttons">
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="appendOperator('÷')">÷</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="appendOperator('x')">x</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="appendOperator('-')">-</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendNumber('.')">.</button>
+            <button class="clear" onclick="clearScreen()">C</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+            <button class="equal" onclick="calculateResult()" colspan="4">=</button>
+        </div>
+    </div>
+    
+    <script>
+        let screen = document.getElementById("screen");
+        let currentInput = "";
+
+        function appendNumber(number) {
+            currentInput += number;
+            screen.value = currentInput;
+        }
+
+        function appendOperator(operator) {
+            if (currentInput !== "" && !isNaN(currentInput[currentInput.length - 1])) {
+                currentInput += operator;
+                screen.value = currentInput;
+            }
+        }
+
+        function clearScreen() {
+            currentInput = "";
+            screen.value = "";
+        }
+
+        function calculateResult() {
+            try {
+                let expression = currentInput.replace(/÷/g, '/').replace(/x/g, '*'); // Ganti ÷ dengan / dan x dengan *
+                currentInput = eval(expression).toString();
+                screen.value = currentInput;
+            } catch (error) {
+                screen.value = "Error";
+                currentInput = "";
+            }
+        }
+    </script>
+</body>
+</html>
