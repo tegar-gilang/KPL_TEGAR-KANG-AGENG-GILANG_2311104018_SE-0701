@@ -1,0 +1,15 @@
+{
+    "firstName": "Tegar",
+    "lastName": "Gilang",
+    "gender": "male",
+    "age": 20,
+    "address": {
+        "streetAddress": "Gayam",
+        "city": "Sukoharjo",
+        "state": "Jawa Tengah"
+    },
+    "courses": [
+        { "code": "CRI2C4", "name": "Konstruksi Perangkat Lunak" },
+        { "code": "CRI2XX", "name": "Basis Data" }
+    ]
+}
