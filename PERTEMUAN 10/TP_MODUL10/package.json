@@ -1,0 +1,9 @@
+{
+    "name": "matematika-libraries",
+    "version": "1.0.0",
+    "description": "Library untuk FPB, KPK, turunan, dan integral",
+    "main": "src/matematika.js",
+    "type": "module",
+    "author": "Nama Kamu",
+    "license": "MIT"
+}
