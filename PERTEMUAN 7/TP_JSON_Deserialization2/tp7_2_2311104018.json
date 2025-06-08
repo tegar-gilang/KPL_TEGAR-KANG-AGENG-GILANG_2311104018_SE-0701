@@ -1,0 +1,32 @@
+{
+	"courses": [
+		{
+			"code": "CRI2C4",
+			"name": "Konstruksi Perangkat Lunak"
+		},
+		{
+			"code": "CCK2FAB4",
+			"name": "Arsitektur dan desain perangkat lunak"
+		},
+		{
+			"code": "CCK1KAB3",
+			"name": "Rekayasa Kebutuhan perangkat lunak"
+		},
+		{
+			"code": "CCK1KAB4",
+			"name": "Basis Data"
+		},
+		{
+			"code": "CCK1KAB5",
+			"name": "Kalkulus"
+		},
+		{
+			"code": "CCK1KAB6",
+			"name": "Algoritma dan Pemrograman"
+		},
+		{
+			"code": "CCK1KAB7",
+			"name": "Matematika Diskrit"
+		}
+	]
+}

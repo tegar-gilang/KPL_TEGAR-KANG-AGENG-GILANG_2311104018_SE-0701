@@ -3,7 +3,7 @@ const fs = require('fs');
 class DataMahasiswa2311104018 {
 static ReadJSON() {
 
-    const jsonData = fs.readFileSync(__dirname + '/jurnal7_2_2311104018.json', 'utf-8');
+    const jsonData = fs.readFileSync('./jurnal7_1_2311104018.json', 'utf-8');
     const data = JSON.parse(jsonData);
 
     console.log("Data Mahasiswa:");
